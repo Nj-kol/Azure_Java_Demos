@@ -6,8 +6,17 @@
 
 ## Create a Blob container for checkpointing
 
-```bash
+```cmd
+az storage container create ^
+    --account-name %STORAGE_ACCOUNT_NAME% ^
+    --name checkpointjavacontainer ^
+    --auth-mode key ^
+    --account-key <your_key>
 ```
+
+## Checkpoint data on Azure blob store
+
+![checkpoint](checkpoint.png)
 
 
 ## References
